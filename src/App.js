@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import Content from './useState/ex10';
 
+import { useState } from 'react'
+import UseEffect from "./useEffect/ex1";
 
 function App() {
   const [show, setShow] = useState(false)
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App" style={{ padding: 50 }}>
       <button onClick={handleToggle}>Toggle</button>
-      {show && <Content />}
+      {show && <UseEffect />}
     </div>
   );
 }
