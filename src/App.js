@@ -1,4 +1,4 @@
-import UseState from "./useState/ex1";
+import UseState from "./useState/ex2";
 
 
 function App() {
