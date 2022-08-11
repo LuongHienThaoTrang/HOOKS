@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import UseEffect from "./useEffect/ex5";
+import UseEffect from "./useEffect/ex6";
 
 function App() {
   const [show, setShow] = useState(false)
