@@ -5,7 +5,7 @@ function UseState() {
     const [name, setName] = useState('')
 
     // One-way bìnding: Khi ta gõ vào input, mà trong component có state mà state thay đổi giá trị tương ứng với người dùng nhập
-    // mà UI không thay đổi theo
+    // mà UI không thay đổi theo.
     console.log(name);
 
     return (
