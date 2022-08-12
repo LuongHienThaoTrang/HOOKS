@@ -1,18 +1,11 @@
 
-import { useState } from 'react'
-import UseEffect from "./useLayoutEffect/ex1";
+import UseRef from "./useRef/ex1";
 
 function App() {
-  const [show, setShow] = useState(false)
-  
-  const handleToggle = () => {
-    setShow(!show)
-  }
 
   return (
     <div className="App" style={{ padding: 50 }}>
-      <button onClick={handleToggle}>Toggle</button>
-      {show && <UseEffect />}
+      <UseRef />
     </div>
   );
 }
