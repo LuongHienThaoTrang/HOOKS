@@ -55,7 +55,7 @@ const reducer = (state = initState, action) => {
                 ...state,
                 jobs: newDeleteJobs
             }
-
+            
         default:
             throw new Error('Invalid action')
     }
