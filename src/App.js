@@ -1,6 +1,6 @@
 
-import { useState, useEffect, useLayoutEffect, useRef, memo, useCallback, useMemo, useReducer } from "react";
-import UseReducer from "./useReducer/ex6";
+import { useState, useEffect, useLayoutEffect, useRef, memo, useCallback, useMemo, useReducer } from "react"
+import UseReducer from "./useReducer/ex6"
 
 function App() {
 
