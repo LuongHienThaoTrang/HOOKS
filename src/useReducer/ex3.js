@@ -1,7 +1,6 @@
 
 import { useState, useEffect, useLayoutEffect, useRef, memo, useCallback, useMemo, useReducer } from "react";
-import { connect } from "react-redux"
-
+import { connect } from 'react-redux';
 
 function UseReducer({ count, downAction, upAction }) {
 
