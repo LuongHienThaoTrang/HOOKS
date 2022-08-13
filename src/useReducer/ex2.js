@@ -6,10 +6,8 @@ const iniState = {
     count: 0
 }
 
-// const DOWN_ACTION = 'down'
-
 const reducer = (state = iniState, action) => {
-    switch (action) {
+        switch (action) {
         case 'DOWN_ACTION':
             return {
                 ...state,
@@ -29,7 +27,6 @@ function UseReducer() {
     const [state, dispatch] = useReducer(reducer, iniState)
 
     const { count } = state
-
 
     return (
         <div>
