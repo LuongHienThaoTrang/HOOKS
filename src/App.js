@@ -1,12 +1,16 @@
 
-import { useState, useEffect, useLayoutEffect, useRef, memo, useCallback, useMemo, useReducer } from "react"
-import UseReducerRecap from "./useReducer recap"
+import { useState, useEffect, useLayoutEffect, useRef, memo, useCallback, useMemo, useReducer, createContext, useContext } from "react"
+import Content from './useContext/Content';
+import { ThemeContext } from "./useContext";
+import './App.css'
 
 function App() {
+  const contextToggleTheme = useContext(ThemeContext)
   
   return (
     <div className="App" style={{ padding: 50 }}>
-      <UseReducerRecap />
+      <button onClick={contextToggleTheme.toggleTheme}>Toggle theme</button>
+      <Content />
     </div>
   );
 }
