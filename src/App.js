@@ -1,8 +1,8 @@
 
 import { useState, useEffect, useLayoutEffect, useRef, memo, useCallback, useMemo, useReducer } from "react"
 import UseReducer from "./useReducer/ex7"
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'

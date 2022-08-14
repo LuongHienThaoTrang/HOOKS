@@ -1,7 +1,7 @@
 
 
-import { useState, useEffect, useLayoutEffect, useRef, memo, useCallback, useMemo, useReducer } from "react";
-import { connect } from 'react-redux';
+import { useState, useEffect, useLayoutEffect, useRef, memo, useCallback, useMemo, useReducer } from "react"
+import { connect } from 'react-redux'
 
 function UseReducer({ job, jobs, setJob, addJob, deleteJob }) {
 
