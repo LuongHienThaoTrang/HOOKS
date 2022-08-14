@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useLayoutEffect, useRef, memo, useCallback, useMemo, useReducer } from "react"
-import UseReducer from "./useReducer/ex7"
+import UseReducer from "./useReducer/ex8"
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import logger from 'redux-logger'
@@ -11,7 +11,7 @@ function App() {
 
   const initState = {
     job: '',
-    jobs: JSON.parse(localStorage.getItem('jobsRedux1')) ?? []
+    jobs: JSON.parse(localStorage.getItem('jobsRedux2')) ?? []
   }
 
   const rootReducer = (state = initState, action) => {
@@ -24,7 +24,7 @@ function App() {
       case 'ADD_JOB':
         const newAddJobs = [...state.jobs, action.payload]
         // Lưu localStorage
-        localStorage.setItem('jobsRedux1', JSON.stringify(newAddJobs))
+        localStorage.setItem('jobsRedux2', JSON.stringify(newAddJobs))
         return {
           ...state,
           jobs: newAddJobs
@@ -33,7 +33,7 @@ function App() {
         const newDeleteJobs = [...state.jobs]
         newDeleteJobs.splice(action.payload, 1)
         // Lưu localStorage
-        localStorage.setItem('jobsRedux1', JSON.stringify(newDeleteJobs))
+        localStorage.setItem('jobsRedux2', JSON.stringify(newDeleteJobs))
         return {
           ...state,
           jobs: newDeleteJobs
