@@ -1,44 +1,28 @@
 
-import { useState, useEffect, useLayoutEffect, useRef, memo, useCallback, useMemo, useReducer, createContext, useContext } from "react"
-import { addJob, deleteJob, setJob, useStore } from './context-useReducer'
+import { useState, useEffect, useLayoutEffect, useRef, memo, useCallback, useMemo, useReducer, createContext, useContext, useImperativeHandle } from "react"
+import UseImperativeHandle from "./useImperativeHandle/ex1";
 
 function App() {
-  const [state, dispatch] = useStore()
 
-  const { job, jobs } = state
+  const videoRef = useRef()
 
-  const inputRef = useRef()
+    useEffect(() => {
+        console.log(videoRef.current);
+    })
 
-  const handleSubmit = () => {
-    if (job !== '') {
-      dispatch(addJob(job))
-      dispatch(setJob(''))
-      inputRef.current.focus()
-    }
+  const handlePlay = () => {
+    videoRef.current.play()
   }
 
-  const handleDelete = index => {
-    dispatch(deleteJob(index))
+  const handlePause = () => {
+    videoRef.current.pause()
   }
   
   return (
     <div className="App" style={{ padding: 50 }}>
-      <h3>Todo</h3>
-      <input 
-        ref={inputRef}
-        value={job}
-        placeholder="Enter todo..."
-        onChange={e => dispatch(setJob(e.target.value))}
-      />
-      <button onClick={handleSubmit}>Add</button>
-      <ul>
-        {jobs.map((job, index) => (
-          <li key={index}>
-            {job}
-            <span onClick={() => handleDelete(index)} style={{ marginLeft: 10 }}>&times;</span>
-          </li>
-        ))}
-      </ul>
+      <UseImperativeHandle ref={videoRef}/><br />
+      <button onClick={handlePlay}>Play</button>
+      <button onClick={handlePause}>Pause</button>
     </div>
   );
 }
